@@ -10,7 +10,7 @@ const router = express.Router();
 
 
 router.post('/product/create', requireSignIn, isAdmin, formidableMiddleware(), create);
-router.put('/category/update/:updateId',  requireSignIn, isAdmin, update);
+router.put('/product/update/:productId',  requireSignIn, isAdmin, formidableMiddleware(), update);
 router.delete('/product/delete/:productId',  requireSignIn, isAdmin, remove);
 router.get('/product/list', list);
 router.get('/product/:slug', read);
